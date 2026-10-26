@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La logica della rete</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+  <meta name="description" content="Corso per docenti dell'Istituto di Istruzione Superiore Galileo Galilei di Voghera: come pensa una rete neurale, dal singolo neurone ai modelli che generano testo e immagini.">
+  <style>
+    :root { --bg: #fafaf7; --fg: #1d1d1b; --muted: #6b6b66; --accent: #2a3990; --accent-2: #d23369;
+            --line: #e2e2dc; --card: #ffffff; --soft: #eef1fa; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #161615; --fg: #ecece8; --muted: #9a9a94; --accent: #8fa3e8; --accent-2: #ef7aa0;
+              --line: #2e2e2c; --card: #1e1e1d; --soft: #1f2233; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg);
+           font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 56px 16px 32px; }
+    a { color: var(--accent); }
+    .kicker { color: var(--accent); font-weight: 600; font-size: .85rem;
+              letter-spacing: .06em; text-transform: uppercase; margin: 0; }
+    h1 { font-size: 2.4rem; line-height: 1.15; margin: .2em 0 .25em; }
+    p.sub { color: var(--muted); margin-top: 0; font-size: 1.15rem; }
+    p.lead { font-size: 1.08rem; margin: 1.4em 0 0; }
+    p.luogo { margin: .6em 0 0; color: var(--muted); }
+    h2 { font-size: 1.25rem; margin: 2.8em 0 .9em; }
+    h3 { font-size: 1.05rem; margin: .1em 0 .35em; }
+    ol.incontri { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+    ol.incontri li { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+                     border-radius: 10px; padding: 16px 20px; }
+    .date { color: var(--accent); font-weight: 600; font-size: .9rem; }
+    ol.incontri p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .presto { display: inline-block; margin-top: .6em; font-size: .85rem; color: var(--muted); }
+    .bio { display: grid; gap: 4px; }
+    .bio p { margin: 0; }
+    .bio .role { color: var(--muted); }
+    footer { border-top: 1px solid var(--line); margin-top: 3.5em; padding-top: 1.4em; font-size: .9rem;
+             color: var(--muted); }
+    footer p { margin: .35em 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="kicker">Corso per docenti</p>
+    <h1>La logica della rete</h1>
+    <p class="sub">Come pensa una rete neurale</p>
+    <p class="lead">Un percorso in quattro incontri dal singolo neurone artificiale ai modelli che generano testo e
+      immagini: che cosa calcola una rete, come impara e come portarla nelle proprie classi.</p>
+    <p class="luogo"><strong>Luogo:</strong> Istituto di Istruzione Superiore Galileo Galilei, via Foscolo 15,
+      Voghera</p>
+    <p class="luogo"><strong>Aula:</strong> TBD</p>
+
+    <h2>Gli incontri</h2>
+    <ol class="incontri">
+      <li>
+        <span class="date">Incontro 1 · data da definire</span>
+        <h3>Dal neurone al percettrone</h3>
+        <p>Intelligenza artificiale, Machine Learning e deep learning. Il neurone artificiale e la sua storia, dal
+           percettrone di Rosenblatt al primo inverno dell'IA. Come impara un percettrone e perché un solo neurone non
+           basta: lo XOR e gli strati nascosti.</p>
+        <span class="presto">Materiali disponibili dopo l'incontro</span>
+      </li>
+      <li>
+        <span class="date">Incontro 2 · data da definire</span>
+        <h3>Come impara una rete</h3>
+        <p>La funzione di errore, la discesa del gradiente e la backpropagation. Come si valuta una rete:
+           accuratezza e matrice di confusione. Underfitting e overfitting, una rete sulle cifre scritte a mano.</p>
+        <span class="presto">Materiali disponibili dopo l'incontro</span>
+      </li>
+      <li>
+        <span class="date">Incontro 3 · data da definire</span>
+        <h3>Reti che vedono: le CNN</h3>
+        <p>Le immagini come numeri, convoluzione, filtri e pooling, il transfer learning. Che cosa guarda una rete
+           in un'immagine e come la si inganna. Il ruolo dei dati e dei loro bias.</p>
+        <span class="presto">Materiali disponibili dopo l'incontro</span>
+      </li>
+      <li>
+        <span class="date">Incontro 4 · data da definire</span>
+        <h3>Dai Transformer ai diffusion models, poi in classe</h3>
+        <p>Token, embedding e attenzione, come un modello linguistico genera testo e come un diffusion model genera
+           immagini. Limiti, allucinazioni e bias. Un'attività sulle reti neurali per la propria materia.</p>
+        <span class="presto">Materiali disponibili dopo l'incontro</span>
+      </li>
+    </ol>
+
+    <h2>Chi tiene il corso</h2>
+    <div class="bio">
+      <p><strong>Matteo Limoncini</strong></p>
+      <p class="role">Senior Data Scientist e Machine Learning Engineer</p>
+      <p>Progetta, sviluppa e mette in produzione sistemi di intelligenza artificiale. Laurea magistrale in
+         Informatica all'Università degli Studi di Milano, con un interesse particolare per la didattica
+         dell'informatica.</p>
+    </div>
+
+    <footer>
+      <p>Domande, dubbi o idee per la tua classe? Scrivimi a
+         <a href="mailto:limoncinimatteo@gmail.com">limoncinimatteo@gmail.com</a>.</p>
+      <p>Materiali per uso didattico.</p>
+    </footer>
+  </main>
+</body>
+</html>
