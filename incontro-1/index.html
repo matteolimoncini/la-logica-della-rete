@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Incontro 1 · La logica della rete</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+  <meta name="description" content="Incontro 1 di La logica della rete: dal neurone al percettrone. Obiettivi, programma e materiali.">
+  <style>
+    :root { --bg: #fafaf7; --fg: #1d1d1b; --muted: #6b6b66; --accent: #2a3990; --accent-2: #d23369;
+            --line: #e2e2dc; --card: #ffffff; --soft: #eef1fa; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #161615; --fg: #ecece8; --muted: #9a9a94; --accent: #8fa3e8; --accent-2: #ef7aa0;
+              --line: #2e2e2c; --card: #1e1e1d; --soft: #1f2233; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg);
+           font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 40px 16px 32px; }
+    a { color: var(--accent); }
+    .back { font-size: .9rem; text-decoration: none; }
+    .kicker { color: var(--accent); font-weight: 600; font-size: .85rem;
+              letter-spacing: .06em; text-transform: uppercase; margin: 1.6em 0 0; }
+    h1 { font-size: 2.2rem; line-height: 1.15; margin: .2em 0 .3em; }
+    h2 { font-size: 1.25rem; margin: 2.6em 0 .8em; }
+    p.sub { color: var(--muted); margin-top: 0; }
+    .obiettivi { background: var(--soft); border-radius: 10px; padding: 16px 20px; margin-top: 1.6em; }
+    .obiettivi p { margin: 0 0 .4em; font-weight: 600; }
+    .obiettivi ul { margin: 0; padding-left: 1.2em; }
+    .obiettivi li { margin: .2em 0; }
+    .scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: .95rem; background: var(--card);
+            border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+    th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+    tr:last-child td { border-bottom: 0; }
+    td.durata { white-space: nowrap; color: var(--accent); font-weight: 600; }
+    td a { overflow-wrap: anywhere; }
+    td .nota { display: block; color: var(--muted); font-size: .88rem; }
+    tr.pausa td { color: var(--muted); font-style: italic; }
+    .presto { color: var(--muted); font-size: .9rem; }
+    p.intro { margin-top: 0; }
+    footer { border-top: 1px solid var(--line); margin-top: 3.5em; padding-top: 1.4em; font-size: .9rem;
+             color: var(--muted); }
+    footer p { margin: .35em 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../">← La logica della rete</a>
+    <p class="kicker">Incontro 1 · data da definire</p>
+    <h1>Dal neurone al percettrone</h1>
+    <p class="sub">Che cosa calcola un neurone artificiale e come impara</p>
+
+    <div class="obiettivi">
+      <p>Obiettivi: alla fine dell'incontro i docenti</p>
+      <ul>
+        <li>distinguono IA, Machine Learning e deep learning;</li>
+        <li>sanno spiegare che cosa calcola un neurone artificiale (somma pesata, bias, funzione di attivazione) e
+            come un percettrone impara da un errore;</li>
+        <li>sanno raccontare come sono nate le reti neurali, tra promesse e «inverni»;</li>
+        <li>sanno spiegare perché un solo neurone non basta (lo XOR) e perché servono gli strati;</li>
+        <li>hanno allenato un percettrone a mano e poi in Colab con Gemini.</li>
+      </ul>
+    </div>
+
+    <h2>Programma della lezione</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Durata</th><th>Fase</th><th>Che cosa si fa</th></tr></thead>
+        <tbody>
+          <tr><td class="durata">10 min</td><td>Apertura</td>
+              <td>Il corso in breve, un giro di presentazioni e una demo di Teachable Machine</td></tr>
+          <tr><td class="durata">10 min</td><td>Kahoot</td><td>Un quiz per capire da dove partiamo</td></tr>
+          <tr><td class="durata">20 min</td><td>IA e reti neurali</td>
+              <td>IA, Machine Learning e deep learning, i modi di imparare, il vocabolario minimo</td></tr>
+          <tr><td class="durata">25 min</td><td>Neurone e percettrone</td>
+              <td>Che cosa calcola un neurone, come decide e come impara un percettrone, il limite dello XOR</td></tr>
+          <tr><td class="durata">15 min</td><td>La storia</td>
+              <td>Dal 1943 a oggi: McCulloch e Pitts, Rosenblatt, «Perceptrons», il primo inverno dell'IA, il ritorno</td></tr>
+          <tr class="pausa"><td class="durata">10 min</td><td>Pausa</td><td></td></tr>
+          <tr><td class="durata">20 min</td><td>Il percettrone a mano</td>
+              <td>Pesi, errori e correzioni con carta e penna, sulle sei serate di «esco stasera?» e sullo XOR</td></tr>
+          <tr><td class="durata">30 min</td><td>AI-assisted coding</td>
+              <td>Un percettrone da zero in Google Colab, con il codice scritto da Gemini</td></tr>
+          <tr><td class="durata">20 min</td><td>TensorFlow Playground</td>
+              <td>Un neurone solo, poi gli strati nascosti: il confine si piega</td></tr>
+          <tr><td class="durata">15 min</td><td>In classe</td><td>Quale attività di oggi portare nella propria classe</td></tr>
+          <tr><td class="durata">5 min</td><td>Chiusura</td><td>3-2-1 sui post-it</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Materiali della lezione</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Momento</th><th>Materiale</th><th>Link</th></tr></thead>
+        <tbody>
+          <tr><td>Tutta la lezione</td><td>Slide</td><td><span class="presto">Disponibili dopo l'incontro</span></td></tr>
+          <tr><td>Apertura</td><td>La demo</td>
+              <td><a href="https://teachablemachine.withgoogle.com">teachablemachine.withgoogle.com</a></td></tr>
+          <tr><td>Il percettrone a mano</td><td>Scheda «Il percettrone a mano»</td>
+              <td><a href="schede/percettrone_a_mano_scheda.pdf">PDF</a></td></tr>
+          <tr><td>AI-assisted coding</td><td>Il notebook da completare</td>
+              <td><a href="https://colab.research.google.com/github/matteolimoncini/la-logica-della-rete/blob/main/incontro-1/notebook/percettrone_guida.ipynb">Apri in Colab</a></td></tr>
+          <tr><td rowspan="2">TensorFlow Playground</td><td>Lo strumento</td>
+              <td><a href="https://playground.tensorflow.org">playground.tensorflow.org</a></td></tr>
+          <tr><td>Il percorso guidato</td><td><a href="schede/playground_consegne.pdf">PDF</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="presto">Il notebook, aperto in Colab, va salvato con <em>File → Salva una copia in Drive</em>: senza la
+      copia le modifiche non si salvano.</p>
+
+    <h2>Kit per la classe</h2>
+    <p class="intro">Le attività dell'incontro, pronte da adattare alla propria materia: per ognuna i materiali per gli
+      studenti e una guida per il docente, con soluzioni e risultati attesi.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Attività</th><th>Per gli studenti</th><th>Per il docente</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Il percettrone a mano</strong><span class="nota">Senza computer: un percettrone impara a
+                  decidere «esco stasera?», poi si blocca sullo XOR</span></td>
+              <td><a href="schede/percettrone_a_mano_scheda.pdf">Scheda (PDF)</a></td>
+              <td><a href="schede/percettrone_a_mano_guida_docente.pdf">Guida con la soluzione passo per passo (PDF)</a></td></tr>
+          <tr><td><strong>Un percettrone con Gemini</strong><span class="nota">AI-assisted coding in Colab: il
+                  percettrone da zero, il confine che si sposta, il limite dello XOR</span></td>
+              <td><a href="https://colab.research.google.com/github/matteolimoncini/la-logica-della-rete/blob/main/incontro-1/notebook/percettrone_guida.ipynb">Notebook (Colab)</a></td>
+              <td><a href="https://colab.research.google.com/github/matteolimoncini/la-logica-della-rete/blob/main/incontro-1/notebook/percettrone_soluzione.ipynb">Soluzione (Colab)</a></td></tr>
+          <tr><td><strong>TensorFlow Playground</strong><span class="nota">No-code, nel browser: un neurone solo, poi
+                  gli strati nascosti e le funzioni di attivazione</span></td>
+              <td><a href="schede/playground_consegne.pdf">Percorso guidato (PDF)</a></td>
+              <td><a href="schede/playground_guida_docente.pdf">Guida con i risultati attesi (PDF)</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <p>Domande, dubbi o idee per la tua classe? Scrivimi a
+         <a href="mailto:limoncinimatteo@gmail.com">limoncinimatteo@gmail.com</a>.</p>
+      <p>Crediti. <a href="https://playground.tensorflow.org">TensorFlow Playground</a> di Daniel Smilkov e Shan Carter
+         (Apache 2.0). <a href="https://teachablemachine.withgoogle.com">Teachable Machine</a> di Google.</p>
+    </footer>
+  </main>
+</body>
+</html>
