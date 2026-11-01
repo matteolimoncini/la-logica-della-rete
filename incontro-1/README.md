@@ -1,6 +1,6 @@
 # Incontro 1 · Dal neurone al percettrone
 
-**La logica della rete: come pensa una rete neurale** · data da definire
+**La logica della rete: come pensa una rete neurale** · martedì 3 novembre 2026
 
 Il kit dell'incontro: tre attività da rifare in classe, ognuna con i materiali per gli studenti e una guida per il
 docente.
@@ -36,8 +36,8 @@ si piega.
 
 | File | A che cosa serve |
 |---|---|
-| [playground_consegne.pdf](schede/playground_consegne.pdf) | Il percorso guidato da stampare |
-| [playground_guida_docente.pdf](schede/playground_guida_docente.pdf) | Che cosa aspettarsi a ogni prova, domande per il confronto |
+| [playground_consegne.pdf](schede/playground_consegne.pdf) | Il percorso guidato, con la schermata spiegata e i link alle prove già impostate |
+| [playground_guida_docente.pdf](schede/playground_guida_docente.pdf) | Che cosa aspettarsi a ogni prova, con le schermate; domande per il confronto |
 
 Lo strumento: [playground.tensorflow.org](https://playground.tensorflow.org).
 
