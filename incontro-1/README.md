@@ -1,6 +1,6 @@
 # Incontro 1 · Dal neurone al percettrone
 
-**La logica della rete: come pensa una rete neurale** · martedì 3 novembre 2026
+**La logica della rete: come pensa una rete neurale** · martedì 1 dicembre 2026
 
 Il kit dell'incontro: tre attività da rifare in classe, ognuna con i materiali per gli studenti e una guida per il
 docente.
